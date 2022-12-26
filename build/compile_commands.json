@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/workspaces/cpp20_env/build",
+  "command": "/usr/bin/g++   -g -std=gnu++20 -o CMakeFiles/advent_22.dir/src/main.cpp.o -c /workspaces/cpp20_env/src/main.cpp",
+  "file": "/workspaces/cpp20_env/src/main.cpp"
+}
+]
