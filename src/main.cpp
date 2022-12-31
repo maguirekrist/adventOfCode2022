@@ -12,19 +12,25 @@
 #include "eight/eight.cpp"
 #include "nine/nine.cpp"
 #include "ten/ten.cpp"
+#include "eleven/eleven.cpp"
+#include "twelve/twelve.cpp"
 
 namespace fs = std::filesystem;
 
 int test() {
     std::string testString = 
-R"(noop
-addx 3
-addx -5
+R"(Sabqponm
+abcryxxl
+accszExk
+acctuvwj
+abdefghi
 )";
 
     std::istringstream iss(testString);
     
-    day_ten::execute_program(iss);
+    day_twelve::Map map = day_twelve::parse_input(iss);
+    
+    std::cout << day_twelve::count_steps_to_summit(map) << std::endl;
 
     return 0;
 }
@@ -47,17 +53,13 @@ std::string get_file_as_string(std::string path) {
 
 int main(int argc, char const *argv[])
 {
-    // if(argc < 2) {
-    //     return test();
-    // } else {
-    //     std::ifstream fileStream = get_filestream("input.txt");
-
-    //     std::cout << day_nine::process_moves(fileStream) << std::endl;
-    // } 
-
-    std::ifstream fileStream = get_filestream("input.txt");
-
-    day_ten::draw_crt(fileStream);
+    if(argc < 2) {
+        return test();
+    } else {
+        std::ifstream fileStream = get_filestream("input.txt");
+        
+        std::cout << day_nine::process_moves(fileStream) << std::endl;
+    } 
 
     return 0;
 }
